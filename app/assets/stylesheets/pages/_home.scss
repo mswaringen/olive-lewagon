@@ -1,1 +1,25 @@
 // Specific CSS for your home-page
+#how-to {
+  display: flex;
+  justify-content: space-around;
+}
+
+#easypeasy {
+  margin-top: 40px;
+}
+
+#ngo-list {
+  margin-top: 50px;
+}
+
+body {
+  background-color: white;
+}
+
+.jumbotron {
+  width: 100%;
+  height: 650px;
+  background-image: image_url('jumbotron.png');
+  background-size: cover;
+  background-position: center center;
+}

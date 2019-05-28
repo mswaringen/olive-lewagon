@@ -1,1 +1,11 @@
-
+.card-category {
+  background-size: cover;
+  background-position: center;
+  height: 150px;
+  width: 250px;
+  color: black;
+  // text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  outline-color: #84DC6E;
+}
