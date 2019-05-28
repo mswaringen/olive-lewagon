@@ -35,3 +35,4 @@ class PaymentsController < ApplicationController
     @transaction = current_user.portfolios.last.transactions.last
   end
 end
+
