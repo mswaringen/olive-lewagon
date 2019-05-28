@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     resources :portfolios, only: [:create]
   end
   resources :round_ups, only: [:new, :create]
-  resources :payments, only: [:new, :create]
+  resources :payments, only: [:new, :create, :show]
 
   get "profile", to: "profiles#show"
   get "dashboard", to: "profiles#dashboard"
