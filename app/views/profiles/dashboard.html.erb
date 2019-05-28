@@ -7,6 +7,7 @@
   <% @user.portfolios.last.transactions.each do |transaction|  %>
     <% stripe_response = ActiveSupport::JSON.decode(transaction.stripe_response) %>
     <li>Payment Date: <%= transaction.created_at %></li>
+    <li>Status: <%= transaction.status %></li>
     <li>Amount: <%= stripe_response["amount"]/100 %></li>
     <li>Card Number: <%= stripe_response["last4"] %></li>
   <% end %>
