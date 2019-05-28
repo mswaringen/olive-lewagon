@@ -1,1 +1,4 @@
 <h1><%= @user.first_name %>'s Dashboard</h1>
+<br>
+<h4>My NGO: <%= @user.portfolios.last.ngo.name %></h4>
+<h6>Impact: <%= @user.portfolios.last.ngo.impact %></h6>

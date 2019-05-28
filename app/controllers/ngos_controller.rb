@@ -7,5 +7,6 @@ class NgosController < ApplicationController
 
   def show
     @ngo = Ngo.find(params[:id])
+    @portfolio = Portfolio.new
   end
 end

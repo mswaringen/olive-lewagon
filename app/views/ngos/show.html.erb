@@ -1,1 +1,6 @@
 <h1><%= @ngo.name  %></h1>
+<p><%= @ngo.description %></p>
+<p>Impact: <%= @ngo.impact %></p>
+<%= simple_form_for [@ngo, @portfolio] do |f|%>
+  <%= f.submit %>
+<% end %>
