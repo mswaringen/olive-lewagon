@@ -4,7 +4,7 @@ class RoundUpsController < ApplicationController
   end
 
   def create
-    @transaction = Transaction.create(portfolio: current_user.portfolios.last, amount: transaction_params[:amount])
+    @transaction = Transaction.create(portfolio: current_user.portfolios.last, amount: transaction_params[:amount], status: :pending)
     redirect_to new_payment_path
   end
 
