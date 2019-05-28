@@ -2,6 +2,7 @@
 <br>
 <h4>My NGO: <%= @user.portfolios.last.ngo.name %></h4>
 <h6>Impact: <%= @user.portfolios.last.ngo.impact %></h6>
+
 <h4>Recent Donations to <%= @user.portfolios.last.ngo.name %></h4>
 <ul>
   <% @user.portfolios.last.transactions.each do |transaction|  %>
@@ -20,3 +21,4 @@
 <h3>*** Stripe Response Data (pick what you need) ***</h3>
 <%= ActiveSupport::JSON.decode(@user.portfolios.last.transactions.last.stripe_response)%>
 <!-- ActiveSupport::JSON.decode(Transaction.last.stripe_response)["description"] -->
+
