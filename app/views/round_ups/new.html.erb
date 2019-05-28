@@ -1,2 +1,5 @@
-<h1>RoundUps#new</h1>
-<p>Find me in app/views/round_ups/new.html.erb</p>
+<h1>Enter a Donation Amount (monthly)</h1>
+<%= simple_form_for @transaction, url: round_ups_path, method: :post do |f| %>
+  <%= f.input :amount %>
+  <%= f.submit %>
+<% end %>

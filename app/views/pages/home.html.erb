@@ -1,2 +1,83 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<!--  Jumbotron -->
+
+<div class="jumbotron" id="hero">
+  <h1 id="header-text">Donate your digital spare change</h1>
+  <h3 id="secondary-text">We help you donate and calculate your digital round up
+    <br>
+  so you can make an impact seamlessly</h3>
+  <div class="mt-16">
+    <br>
+    <%= link_to 'Get started', new_user_registration_path, class: "button-primary" %>
+  </div>
+</div>
+
+<!--  How does it works area -->
+
+<div class="container">
+  <h2 align=center class="second-text">How does it work?</h2>
+
+  <div id="how-to">
+    <div class="card-category">
+      <h2 class="number-card">1</h2>
+      <p class="three-step">Choose an NGO that you love ♥️</p>
+    </div>
+
+    <div class="card-category">
+      <h2 class="number-card">2</h2>
+      <p class="three-step">Link you bank or credit card and let us round up your transactions </p>
+    </div>
+
+    <div class="card-category">
+      <h2 class="number-card">3</h2>
+      <p class="three-step">Automatically donate your digital spare change every month!</p>
+    </div>
+
+  </div>
+
+  <!--  Easypeasy area -->
+
+  <div class="easypeasy" align="center">
+
+    <h2 id="easypeasy" align=center class="second-text">Easy Peasy</h2>
+    <p align=center class="third-text">Now you can make an impact monthly</p>
+    <%= link_to 'Get started', ngos_path, class: "button-primary" %>
+  </div>
+
+  <!--  NGO area -->
+  <div class="ngo-landingpage" align="center">
+
+    <h2 id="ngo-list" align=center class="second-text">Automatically Contribute to Verified Non-Profits</h2>
+  </div>
+
+  <!--  card area -->
+  <div class="card-landing">
+
+
+    <div class="card-trip">
+      <img src="https://images.unsplash.com/photo-1504159506876-f8338247a14a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80">
+      <div class="card-trip-infos">
+        <div>
+
+        <h2>UNICEF</h2>
+        <p>UNICEF works day-in day-out in the world’s toughest places to reach the most vulnerable and disadvantaged children. </p>
+        </div>
+      </div>
+    </div>
+  <div class="card-trip">
+    <img src="https://images.unsplash.com/photo-1521651201144-634f700b36ef?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80">
+    <div class="card-trip-infos">
+      <div>
+        <h2>Save The Elephants</h2>
+        <p>Our mission is to secure a future for elephants and to sustain the beauty and ecological integrity of the places they live; </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+
+
+
+</div>
