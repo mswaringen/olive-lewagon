@@ -1,0 +1,7 @@
+<h1>Congratulations on your First Donation!</h1>
+<ul>
+  <li>Status: <%= @transaction.status %></li>
+  <li>Recipient: <%= @transaction.portfolio.ngo.name %></li>
+  <li>Amount: <%= humanized_money_with_symbol(@transaction.amount) %></li>
+</ul>
+<%= link_to "Go to Dashboard", dashboard_path %>
