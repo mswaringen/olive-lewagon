@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>Site Map</h1>
+  <p><%= link_to "Home", root_path %></p>
+  <p><%= link_to "NGOs", ngos_path %></p>
+  <ul>
+    <% @ngos.each do |ngo| %>
+      <li>
+        <%= link_to ngo.name, ngo %>
+      </li>
+    <% end %>
+  </ul>
+  <p><%= link_to "Profile", profile_path %></p>
+  <p><%= link_to "Dashboard", dashboard_path %></p>
+</div>

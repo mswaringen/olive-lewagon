@@ -1,2 +1,8 @@
-<h1>Profiles#show</h1>
-<p>Find me in app/views/profiles/show.html.erb</p>
+<h1>Hi <%= @user.first_name %>!</h1>
+<ul>
+  <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
+  <li><%= link_to "Change your NGO", ngos_path %></li>
+  <li><%= link_to "Edit Linked Bank/Credit Card Account", '#'%></li>
+  <li><%= link_to "Edit Payment Information", '#'%></li>
+  <li><%= link_to "View Dashboard", dashboard_path %></li>
+</ul>

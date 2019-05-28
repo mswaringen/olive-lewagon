@@ -1,2 +1,8 @@
-<h1>Ngos#index</h1>
-<p>Find me in app/views/ngos/index.html.erb</p>
+<h1>NGOs</h1>
+<ul>
+  <% @ngos.each do |ngo| %>
+    <li>
+      <%= link_to ngo.name, ngo %>
+    </li>
+  <% end %>
+</ul>
