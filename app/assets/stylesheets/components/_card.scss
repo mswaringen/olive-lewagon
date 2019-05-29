@@ -11,16 +11,24 @@
 }
 
 .card-trip {
-  overflow: hidden;
+  overflow: unset;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   width: 350px;
   border-radius: 20px;
 }
 
+.card-trip-image {
+  position: relative;
+  overflow: hidden;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: -30px;
+}
+
 .card-trip > img {
   height: 200px;
-  width: 100%;
+  width: 320px;
   object-fit: cover;
   border-radius: 15px;
   box-shadow: 0 0 15px rgba(0,0,0,0.3);
@@ -47,4 +55,21 @@
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
+}
+
+.card-large {
+  overflow: unset;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.card-large h1 {
+  padding: 30px
+}
+
+.card-large p {
+  margin: 0px 30px 20px 30px;
 }
