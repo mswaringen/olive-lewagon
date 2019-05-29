@@ -103,3 +103,16 @@
   height: 154%;
   width: 100%;
 }
+
+.card-dashboard {
+  height: 60px;
+  font-size: 32px;
+  font-weight: bold;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.card-dashboard h1 {
+  margin: 10px 0px 10px 20px;
+  padding: 10px;
+}
