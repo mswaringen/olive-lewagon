@@ -1,6 +1,16 @@
-<h1><%= @ngo.name  %></h1>
+<div class="container">
+<div class="card-large">
+
+<h1 class="show-title"><%= @ngo.name %></h1>
 <p><%= @ngo.description %></p>
 <p>Impact: <%= @ngo.impact %></p>
 <%= simple_form_for [@ngo, @portfolio] do |f|%>
-  <%= f.submit %>
+<div class="button-show">
+
+  <%= f.submit class: "button-primary show-button" %>
+  <br>
+<%= link_to "Back", ngos_path %>
 <% end %>
+</div>
+</div>
+</div>
