@@ -5,7 +5,7 @@
 <h4>Recent Donations to <%= @user.portfolios.last.ngo.name %></h4>
 <ul>
   <% @user.portfolios.last.transactions.each do |transaction|  %>
-    <% unless stripe_response.nil?  %>
+    <% unless transaction.stripe_response.nil?  %>
       <% stripe_response = ActiveSupport::JSON.decode(transaction.stripe_response) %>
     <% end %>
     <li>Payment Date: <%= transaction.created_at %></li>
