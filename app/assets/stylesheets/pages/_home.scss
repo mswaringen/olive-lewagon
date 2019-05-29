@@ -18,8 +18,16 @@ body {
 
 .jumbotron {
   width: 100%;
-  height: 650px;
+  height: 800px;
   background-image: image_url('jumbotron.png');
   background-size: cover;
   background-position: center center;
+}
+
+.card-landing {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 70px;
+  padding: 40px;
+  justify-items: center;
 }

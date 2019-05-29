@@ -49,7 +49,9 @@ class RoundUpsController < ApplicationController
                                                      offset: transactions.length)
       transactions += transaction_response.transactions
     end
-    raise
+  end
+
+  def link
   end
 
   private
