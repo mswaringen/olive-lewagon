@@ -1,23 +1,24 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <ul class="navbar-nav">
+    <% if user_signed_in? %>
+    <div class="nav-item active">
+      <%= link_to "Profile", profile_path, class: " nav-text nav-link" %>
+    </div>
+    <div class=" nav-item active">
+      <%= link_to "About us", "#", class: "nav-text nav-link" %>
+    </div>
+  </ul>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon "></span>
   </button>
-
+  <div>
+  <%= link_to root_path, class: "logo_centered navbar-brand" do %>
+  <%= image_tag "olive_logo.png", style: "width: 40px;" %>
+  <% end %>
+  </div>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto d-flex justify-content-between">
-      <% if user_signed_in? %>
-        <div class="nav-item active">
-          <%= link_to "Profile", profile_path, class: " nav-text nav-link" %>
-        </div>
-        <div class=" nav-item active">
-          <%= link_to "About us", "#", class: "nav-text nav-link" %>
-        </div>
-      <div>
-        <%= link_to root_path, class: "logo_centered navbar-brand" do %>
-        <%= image_tag "olive_logo.png" %>
-      </div>
-        <% end %>
+    <ul class="navbar-nav mr-auto">
           <div class=" nav-item dropdown">
             <div class="btn-group">
               <button type="button" class="button-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -37,6 +38,7 @@
       <% end %>
     </ul>
   </div>
+
 </div>
 
 
