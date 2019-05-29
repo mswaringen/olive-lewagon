@@ -13,5 +13,8 @@ Rails.application.routes.draw do
   get "profile", to: "profiles#show"
   get "dashboard", to: "profiles#dashboard"
   get "sitemap", to: "pages#sitemap"
+  get "link", to: "round_ups#link"
+  post "get_access_token", to: "round_ups#get_access_token"
+  get "link_result", to: "round_ups#link_result"
 
 end
