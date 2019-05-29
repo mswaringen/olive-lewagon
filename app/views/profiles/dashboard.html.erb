@@ -1,5 +1,13 @@
-<h1><%= @user.first_name %>'s Dashboard</h1>
+<div class="container">
+<div class="card-dashboard">
+
+<h1 class="show-title" id="dash-header">Hey <%= @user.first_name %>,</h1>
+</div>
 <br>
+<h4 class="second-text">This is your NGO portfolio</h4>
+<div class="card-dashboard">
+
+</div>
 <h4>My NGO: <%= @user.portfolios.last.ngo.name %></h4>
 <h6>Impact: <%= @user.portfolios.last.ngo.impact %></h6>
 <h4>Recent Donations to <%= @user.portfolios.last.ngo.name %></h4>
@@ -22,3 +30,4 @@
 <h3>*** Stripe Response Data (pick what you need) ***</h3>
 <%= ActiveSupport::JSON.decode(@user.portfolios.last.transactions.last.stripe_response)%>
 <!-- ActiveSupport::JSON.decode(Transaction.last.stripe_response)["description"] -->
+</div>
