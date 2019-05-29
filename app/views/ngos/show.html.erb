@@ -1,6 +1,9 @@
-<div class="container">
+<div class="container con-show">
 <div class="card-large">
+  <div class="card-large-image">
 
+<%= image_tag @ngo.photo %>
+  </div>
 <h1 class="show-title"><%= @ngo.name %></h1>
 <p><%= @ngo.description %></p>
 <p>Impact: <%= @ngo.impact %></p>
@@ -9,7 +12,7 @@
 
   <%= f.submit class: "button-primary show-button" %>
   <br>
-<%= link_to "Back", ngos_path %>
+<%= link_to "Back", root_path %>
 <% end %>
 </div>
 </div>

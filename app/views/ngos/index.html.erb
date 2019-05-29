@@ -1,11 +1,25 @@
 <div class="container">
 
-<h1>NGOs</h1>
-<ul>
-  <% @ngos.each do |ngo| %>
-    <li>
-      <%= link_to ngo.name, ngo %>
-    </li>
-  <% end %>
-</ul>
+<h1 class="show-title" align="center">Choose NGO that you love</h1>
+
+
+<div class="card-landing" id="index-page">
+    <% @ngos.each do |ngo| %>
+
+    <div class="card-trip">
+      <%= link_to ngo_path(ngo) do  %>
+      <div class="card-trip-image">
+        <%= image_tag ngo.photo %>
+      </div>
+      <% end %>
+      <div class="card-trip-infos">
+        <div>
+          <h2 class="second-text"><%= ngo.name %></h2>
+          <p><%= truncate ngo.description, length: 150 %></p>
+        </div>
+      </div>
+    </div>
+
+     <% end %>
+  </div>
 </div>
