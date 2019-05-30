@@ -61,10 +61,33 @@ four = Portfolio.create!(ngo: against, user: testing)
 five = Portfolio.create!(ngo: ingo, user: fakename)
 
 puts 'Creating Transactions..'
-Transaction.create!(portfolio: one, amount_cents: 100)
-Transaction.create!(portfolio: two, amount_cents: 1000)
-Transaction.create!(portfolio: three, amount_cents: 500)
-Transaction.create!(portfolio: four, amount_cents: 430)
-Transaction.create!(portfolio: five, amount_cents: 1580)
+Transaction.create!(
+  portfolio: two,
+  amount_cents: 1000,
+  transaction_date: Date.new(2019, 01, 20))
+Transaction.create!(
+  portfolio: two,
+  amount_cents: 950,
+  transaction_date: Date.new(2019, 02, 20))
+Transaction.create!(
+  portfolio: two,
+  amount_cents: 1100,
+  transaction_date: Date.new(2019, 03, 20))
+Transaction.create!(
+  portfolio: two,
+  amount_cents: 1200,
+  transaction_date: Date.new(2019, 04, 20))
+Transaction.create!(
+  portfolio: two,
+  amount_cents: 1250,
+  transaction_date: Date.new(2019, 05, 20))
+Transaction.create!(
+  portfolio: one,
+  amount_cents: 2200,
+  transaction_date: Date.new(2019, 04, 20))
+Transaction.create!(
+  portfolio: one,
+  amount_cents: 1250,
+  transaction_date: Date.new(2019, 05, 20))
 
 puts 'Seeding done..'

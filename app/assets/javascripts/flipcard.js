@@ -1,4 +1,3 @@
 $('.flip').hover(function(){
-        $(this).find('.card').toggleClass('flipped');
-
+  $(this).find('.card').toggleClass('flipped');
  });
