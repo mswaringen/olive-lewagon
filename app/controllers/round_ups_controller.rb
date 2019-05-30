@@ -34,6 +34,7 @@ class RoundUpsController < ApplicationController
   end
 
   def link_result
+    @transaction = Transaction.new
     @access_token = current_user.access_token
     @transaction_response = @client.transactions.get(@access_token, Date.yesterday.prev_month.to_s(:db), Date.yesterday.to_s(:db))
 
