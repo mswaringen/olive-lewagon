@@ -5,5 +5,13 @@ class ProfilesController < ApplicationController
 
   def dashboard
     @user = current_user
+    @transactions = []
+    @user.portfolios.each do |port|
+      port.transactions.each do |trans|
+        @transactions << trans
+      end
+    end
   end
 end
+
+

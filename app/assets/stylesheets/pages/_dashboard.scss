@@ -2,3 +2,26 @@
   font-size: 2rem !important;
   color: #A1A98E !important;
 }
+
+#chart-activity {
+  display: flex;
+  justify-content: space-between;
+}
+
+#activity-title {
+  color: #D58B6A;
+  margin: 20px 0px 20px 30px;
+}
+
+#impact-text {
+  margin-top: -220px;
+}
+
+#impact-card {
+  display: flex;
+  margin-top: -25px;
+}
+
+#second-impact {
+  margin-left: 50px;
+}
