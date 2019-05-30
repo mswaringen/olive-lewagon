@@ -1,42 +1,38 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <ul class="navbar-nav">
-    <% if user_signed_in? %>
-    <div class="nav-item active">
-      <%= link_to "Profile", profile_path, class: " nav-text nav-link" %>
-    </div>
-    <div class=" nav-item active">
-      <%= link_to "About us", "#", class: "nav-text nav-link" %>
-    </div>
-  </ul>
+
+    <ul class="navbar-nav">
+      <div class="nav-item active">
+      <%=link_to "Login", new_user_session_path, class: "nav-text nav-link" %>
+      </div>
+        <div class=" nav-item active">
+        <%= link_to "About us", "#", class: "nav-text nav-link" %>
+        </div>
+    </ul>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon "></span>
   </button>
-  <div>
-  <%= link_to root_path, class: "navbar-brand" do %>
-  <%= image_tag "logo_small.png", style: "width:145px; margin-top: 10px;" %>
-  <% end %>
-  </div>
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+
+    <div>
+    <%= link_to root_path, class: "navbar-brand" do %>
+    <%= image_tag "logo_small.png", style: "width:145px; margin-top: 10px;" %>
+    <% end %>
+    </div>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
           <div class=" nav-item dropdown">
             <div class="btn-group">
               <button type="button" class="button-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Menu
               </button>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <%= link_to "NGOs", ngos_path, class: "dropdown-item" %>
-            <%= link_to "Dashboard", dashboard_path, class: "dropdown-item" %>
-            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-          </div>
-        </div>
-      </div>
-      <% else %>
-        <div class="nav-item">
-          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-        </div>
-      <% end %>
-    </ul>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                <%= link_to "NGOs", ngos_path, class: "dropdown-item" %>
+                <%= link_to "Sign up", new_user_registration_path, class: "dropdown-item" %>
+              </div>
+            </div>
+         </div>
+        </ul>
   </div>
 
 </div>
