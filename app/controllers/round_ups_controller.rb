@@ -31,12 +31,11 @@ class RoundUpsController < ApplicationController
   def get_access_token
     exchange_token_response = @client.item.public_token.exchange(params['public_token'])
     current_user.update(access_token: exchange_token_response['access_token'])
-    redirect_to link_result_path
   end
 
   def link_result
     @access_token = current_user.access_token
-    @transaction_response = @client.transactions.get(@access_token, '2019-04-20', '2019-05-20')
+    @transaction_response = @client.transactions.get(@access_token, Date.yesterday.prev_month.to_s(:db), Date.yesterday.to_s(:db))
 
     @total_spend = 0
     @total_round_up = 0
