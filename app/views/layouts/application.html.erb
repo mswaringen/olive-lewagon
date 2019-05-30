@@ -12,7 +12,11 @@
   </head>
   <body>
 
+    <% if user_signed_in? %>
     <%= render 'shared/navbar' %>
+    <% else %>
+     <%= render 'shared/navbarnew' %>
+     <% end %>
     <%= render 'shared/flashes' %>
     <div class="container-fluid">
     <%= yield %>
@@ -20,4 +24,5 @@
 
     <%= javascript_include_tag 'application' %>
   </body>
+     <%= render 'shared/footer' %>
 </html>
