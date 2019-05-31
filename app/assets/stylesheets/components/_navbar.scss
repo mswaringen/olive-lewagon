@@ -7,3 +7,20 @@
   flex-grow: 0;
 }
 
+.dropdown_style {
+font-weight: lighter;
+color: #D58B6A;
+text-align: center;
+
+&:hover {
+  background-color: white !important;
+
+}
+
+}
+
+.dropdown-menu {
+border-radius : 30px;
+
+}
+

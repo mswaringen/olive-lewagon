@@ -1,24 +1,105 @@
-<h1><%= @user.first_name %>'s Dashboard</h1>
-<br>
-<h4>My NGO: <%= @user.portfolios.last.ngo.name %></h4>
-<h6>Impact: <%= @user.portfolios.last.ngo.impact %></h6>
-<h4>Recent Donations to <%= @user.portfolios.last.ngo.name %></h4>
+<div class="container">
+<!-- Header -->
+  <div class="card-dashboard">
+    <h1 class="show-title" id="dash-header">Hey <%= @user.first_name %>,</h1>
+  </div>
+
+  <br>
+
+  <!-- Chart -->
+  <h4 class="second-text">This is your NGO portfolio</h4>
+
+  <div id="chart-activity">
+    <div class="card-chart" id="card-chart">
+      <%= area_chart [
+       { name: "Donation", data: [ Transaction.pluck(:amount_cents), Transaction.pluck(:transaction_date)] } ], colors: ['green'], xtitle: "Donation", ytitle: "Date"  %>
+     </div>
+
+     <br>
+
+     <!-- Monthly Activity -->
+
+     <div class="card-activity">
+      <h4 id="activity-title">Monthly Activity</h4>
+      <% @transactions.each do |t| %>
+      <ul>
+        <li><%= t.transaction_date %></li>
+        <p>You are donating $ <strong> <%= t.amount %></strong>
+          to <%= @user.portfolios.last.ngo.name %>,
+          status: <%= t.status %></p>
+        </ul>
+        <% end %>
+      </div>
+    </div>
+
+    <h4 class="second-text" id="impact-text">Impact that you created</h4>
+
+    <br>
+
+    <div id="impact-card">
+      <div class="card-impact">
+        <%# @transactions.each do |t| %>
+        <h2 class="number-card"><%#= t.amount %>20</h2>
+        <%# end %>
+        <p class="three-step"><%= @user.portfolios.last.ngo.impact %></p>
+      </div>
+      <div class="card-impact" id="second-impact">
+        <h2 class="number-card">5</h2>
+        <p class="three-step">Malaria nets has been delivered</p>
+      </div>
+    </div>
+
+    <br>
+
+    <h4 class="second-text">NGO that you supported:</h4>
+
+
+<div class="card-landing">
+    <%# @ngos.each do |ngo| %>
+
+    <div class="card-trip">
+      <%= link_to ngo_path(@user.portfolios.last.ngo) do  %>
+      <div class="card-trip-image">
+        <%= image_tag @user.portfolios.last.ngo.photo %>
+      </div>
+      <% end %>
+      <div class="card-trip-infos">
+        <div>
+          <h2 class="second-text"><%= @user.portfolios.last.ngo.name %></h2>
+          <p><%= truncate @user.portfolios.last.ngo.description, length: 150 %></p>
+        </div>
+      </div>
+    </div>
+          <div class="card-impact" id="second-impact">
+        <%= social_share_button_tag([@user.portfolios.last.ngo.photo, @user.portfolios.last.ngo.name, @user.portfolios.last.ngo.description], :allow_sites => %w(twitter facebook whatsapp_web telegram email pinterest google_plus)) %>
+      </div>
+
+<!--     <#% end %>
+  </div>
+-->
+<!-- <h4>My NGO: <%#= @user.portfolios.last.ngo.name %></h4>
+<h6>Impact: <%#= @user.portfolios.last.ngo.impact %></h6>
+<h4>Recent Donations to <%#= @user.portfolios.last.ngo.name %></h4>
 <ul>
-  <% @user.portfolios.last.transactions.each do |transaction|  %>
-    <% unless transaction.stripe_response.nil?  %>
-      <% stripe_response = ActiveSupport::JSON.decode(transaction.stripe_response) %>
-    <% end %>
-    <li>Payment Date: <%= transaction.created_at %></li>
-    <li>Status: <%= transaction.status %></li>
-    <li>Amount: <%= stripe_response["amount"]/100 %></li>
-    <li>Card Number: <%= stripe_response["last4"] %></li>
-  <% end %>
+  <%# @user.portfolios.last.transactions.each do |transaction|  %>
+  <%# unless transaction.stripe_response.nil?  %>
+  <%# stripe_response = ActiveSupport::JSON.decode(transaction.stripe_response) %>
+  <%# end %>
+  <li>Payment Date: <%#= transaction.created_at %></li>
+  <li>Status: <%#= transaction.status %></li>
+  <li>Amount: <%#= stripe_response["amount"]/100 %></li>
+  <li>Card Number: <%#= stripe_response["last4"] %></li>
+  <#% end %>
 </ul>
-<br>
+ -->
+
+<!-- <br>
 <br>
 <br>
 <br>
 <br>
 <h3>*** Stripe Response Data (pick what you need) ***</h3>
-<%= ActiveSupport::JSON.decode(@user.portfolios.last.transactions.last.stripe_response)%>
-<!-- ActiveSupport::JSON.decode(Transaction.last.stripe_response)["description"] -->
+<#%= ActiveSupport::JSON.decode(@user.portfolios.last.transactions.last.stripe_response)%>
+ActiveSupport::JSON.decode(Transaction.last.stripe_response)["description"]
+</div>
+ -->

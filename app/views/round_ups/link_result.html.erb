@@ -1,0 +1,27 @@
+<div class="container">
+  <h1>Your Account has been Linked!</h1>
+  <h3>Last 30 days of Transactions</h3>
+  <p>Total Transactions: <%= @transaction_response.transactions.count %></p>
+  <p>Total Spend <%= @total_spend %></p>
+  <p>Total Round Up <%= @total_round_up %></p>
+  <%= simple_form_for @transaction, url: round_ups_path, method: :post do |f| %>
+    <%= f.hidden_field :amount, value: @total_round_up %>
+    <%= f.submit %>
+  <% end %>
+  <h5>Transactions</h5>
+  <ul>
+    <%@transaction_response.transactions.each do |t| %>
+      <li> <%= t.name %>
+        <ul>
+          <li>Date: <%= t.date  %></li>
+          <% amount = BigDecimal.new(t.amount.to_s) %>
+          <li>Amount: <%= amount  %></li>
+          <% up = amount.ceil  %>
+          <% round_up = up - amount %>
+          <li>Round Up: <%= round_up  %></li>
+        </ul>
+      </li>
+    <% end %>
+  </ul>
+</div>
+<!-- #<Plaid::Models::Transaction account_id="PpzwXEADAkuJ6wJAmWWyhxybPV3BJVi7l43Rw" amount=5850 category=["Transfer", "Debit"] category_id="21006000" date="2019-05-20" iso_currency_code="USD" location=#<Plaid::Models::TransactionLocation> name="ACH Electronic CreditGUSTO PAY 123456" payment_meta=#<Plaid::Models::TransactionPaymentMeta payment_method="ACH"> pending=false transaction_id="GPZmBk6D6nfNnxNwp44duwzxmk6EyPc1a8K3R" transaction_type="special"> -->
