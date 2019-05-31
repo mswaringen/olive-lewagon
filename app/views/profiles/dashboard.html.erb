@@ -65,6 +65,11 @@
         </div>
       </div>
     </div>
+          <div class="card-impact" id="second-impact">
+        <%= social_share_button_tag([@user.portfolios.last.ngo.photo, @user.portfolios.last.ngo.name, @user.portfolios.last.ngo.description], :allow_sites => %w(twitter facebook whatsapp_web telegram email pinterest google_plus)) %>
+      </div>
+    </div>
+
   </div>
 </div>
 <!-- <h4>My NGO: <%#= current_user.portfolios.last.ngo.name %></h4>
