@@ -8,6 +8,8 @@
     <%= f.hidden_field :amount, value: @total_round_up %>
     <%= f.submit %>
   <% end %>
+  <!-- <%= line_chart @transaction_response.transactions.group_by_day(&:date).count %> -->
+  <%= raise %>
   <h5>Transactions</h5>
   <ul>
     <%@transaction_response.transactions.each do |t| %>
