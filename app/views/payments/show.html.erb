@@ -1,7 +1,10 @@
-<h1>Congratulations on your First Donation!</h1>
+<div class="container" id="con-page">
+
+<h1 align="center" class="third-text">Congratulations on your First Donation!</h1>
 <ul>
   <li>Status: <%= @transaction.status %></li>
   <li>Recipient: <%= @transaction.portfolio.ngo.name %></li>
   <li>Amount: <%= humanized_money_with_symbol(@transaction.amount) %></li>
 </ul>
-<%= link_to "Go to Dashboard", dashboard_path %>
+<%= link_to "Go to Dashboard", dashboard_path, class:"button-primary", id: "button-con"%>
+</div>
