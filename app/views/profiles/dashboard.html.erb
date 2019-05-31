@@ -19,7 +19,7 @@
     <!-- Monthly Activity -->
     <div class="card-activity">
       <h4 id="activity-title">Monthly Activity</h4>
-      <% @transactions.each do |t| %>
+      <% @transactions.reverse_each do |t| %>
         <ul>
           <li><%= t.transaction_date %></li>
           <p>You are donating $ <strong> <%= t.amount %></strong>

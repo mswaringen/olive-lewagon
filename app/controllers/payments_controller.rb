@@ -21,7 +21,7 @@ class PaymentsController < ApplicationController
       currency:     @transaction.amount.currency
     )
 
-    @transaction.update(stripe_response: charge.to_json, status: :paid)
+    @transaction.update(stripe_response: charge.to_json, status: :paid, transaction_date: Time.now)
     redirect_to payment_path(@transaction)
 
   rescue Stripe::CardError => e
@@ -35,4 +35,3 @@ class PaymentsController < ApplicationController
     @transaction = current_user.portfolios.last.transactions.last
   end
 end
-
