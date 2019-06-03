@@ -53,24 +53,25 @@
   </div>
 
   <!--  card area -->
-  <div class="card-landing">
+
+
+ <div class="card-landing" id="index-page">
     <% @ngos.each do |ngo| %>
-
-    <div class="card-trip">
-      <%= link_to ngo_path(ngo) do  %>
-      <div class="card-trip-image">
-        <%= image_tag ngo.photo %>
-      </div>
-      <% end %>
-      <div class="card-trip-infos">
-        <div>
-          <h2 class="second-text"><%= ngo.name %></h2>
-          <p><%= truncate ngo.description, length: 150 %></p>
+      <%= link_to ngo_path(ngo), data: { toggle: "modal", target: "#ngo_modal_#{ngo.id}" } do  %>
+        <div class="card-trip">
+          <div class="card-trip-image">
+            <%= image_tag ngo.photo %>
+          </div>
+          <div class="card-trip-infos">
+            <div>
+              <h2 class="second-text"><%= ngo.name %></h2>
+              <p><%= truncate ngo.description, length: 150 %></p>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+      <% end %>
 
+      <%= render 'ngos/modal_ngo_show', ngo: ngo, portfolio: Portfolio.new %>
     <% end %>
   </div>
-
 </div>

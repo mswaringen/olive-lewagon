@@ -1,6 +1,6 @@
   <div class="container con-show">
 
-  <div class="modal fade" id="modalRegisterForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  <div class="modal fade " id="modalRegisterForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
   aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -16,8 +16,7 @@
     <%= simple_form_for [@ngo, @portfolio] do |f|%>
       <div class="button-show">
         <%= f.submit class: "button-primary show-button" %>
-        <br>
-        <%= link_to "Back", root_path %>
+
       </div>
     <% end %>
   </div>

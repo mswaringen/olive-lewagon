@@ -16,7 +16,13 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   width: 350px;
   border-radius: 20px;
+
+.card-trip a {
+ color: black;
+  }
 }
+
+
 
 .card-trip-image {
   position: relative;
@@ -114,7 +120,7 @@ border-radius: 10px;
 }
 
 .card-large p {
-  margin: 0px 30px 20px 30px;
+  margin: -20px 30px 20px 30px;
 }
 
 .card-large-image {
@@ -233,4 +239,16 @@ border-radius: 10px;
 
 .card-donation h2 {
   margin: 10px 20px -20px 60px;
+}
+
+.ngo_impact {
+  color: #A1A98E;
+  font-weight: bold;
+  font-size: 28px;
+
+}
+
+.card-large p {
+  margin-top: 10px !important;
+
 }
