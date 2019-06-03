@@ -13,7 +13,8 @@ class ProfilesController < ApplicationController
 
     @amounts = []
     @transaction_chart_data = @transactions.group_by_month(:transaction_date).sum(:amount_cents)
-
+    @transaction_total = @transactions.sum(:amount_cents)
+    @impact = BigDecimal.new(current_user.portfolios.find_by(status:'active').ngo.impact)
     # @user.portfolios.each do |port|
     #   port.transactions.each do |trans|
     #     @transactions << trans
