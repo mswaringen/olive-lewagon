@@ -87,6 +87,27 @@ margin-bottom: 40px;
 
 }
 
+.link_text {
+  a {
+  color: #A1A98E;
+  font-family: Montserrat;
+  text-decoration: none;
+  text-align: center;
+  align-items: center;
+  }
+}
+
+.form-actions {
+  a {
+  color: #D58B6A;
+  font-family: Montserrat;
+  text-decoration: none;
+  text-align: center;
+  }
+  input {
+   font-family: Montserrat;
+  }
+ }
 .registration-text {
 
 font-family: Montserrat;
@@ -111,14 +132,18 @@ border-right: 0px solid white;
 border-left: 0px solid white;
 border-top: 0px solid white;
 padding: 1.2rem 1rem;
+background-color: white;
 }
 
 
 .form-actions {
-  margin-top: 30px;
+  margin-top: 25px;
   justify-content: center;
   align-items:center;
-  margin-left: 140px;
+  display: flex;
+  justify-content-center: center;
+  margin-right: 40px;
+  margin-bottom: 10px;
 }
 
 .simple_form {
@@ -128,4 +153,17 @@ padding: 1.2rem 1rem;
   margin-right: 50px;
 
 }
+
+.form_group {
+width: 623.5px;
+height: 40px;
+left: 422px;
+top: 467.5px;
+border-bottom: 0.5px solid #535353;
+border-right: 0px solid white;
+border-left: 0px solid white;
+border-top: 0px solid white;
+padding: 1.2rem 1rem;
+}
+
 
