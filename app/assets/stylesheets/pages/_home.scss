@@ -25,9 +25,10 @@ body {
 }
 
 .card-landing {
-  display: grid;
+  display: flex;
   grid-template-columns: 1fr 1fr;
   grid-gap: 70px;
   padding: 40px;
-  justify-items: center;
+  align-items: flex-end;
+  margin: 30px;
 }

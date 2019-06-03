@@ -4,8 +4,7 @@
 }
 
 #chart-activity {
-  display: flex;
-  justify-content: space-between;
+  // margin: 40px 0px 15px 0px;
 }
 
 #activity-title {
@@ -19,9 +18,14 @@
 
 #impact-card {
   display: flex;
-  margin-top: -25px;
+  // margin-top: -190px;
+  margin-left: 100px;
 }
 
-#second-impact {
-  margin-left: 50px;
+.social-card {
+  margin: 25px;
+  margin: 25px;
+  padding-top: 25px;
+  padding-left: 60px;
 }
+
