@@ -1,9 +1,11 @@
 <div class="container">
-  <h1>Link your Debit/Credit Card Account</h1>
   <br>
+  <h1 class="third-text" align="center" id="link-title">Link your Debit/Credit Card Account</h1>
+  <br>
+<div class="card-link">
+
   <h5>We need to access the last 30 days of debit or credit card transactions you have made, so we can calculate your digital spare change! Please link your account below. We promise no personal information will be stored.</h5>
-  <br>
-  <button id="link-button">Link Account</button>
+  <button id="link-button" class="button-primary">Link Account</button>
   <script
 src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
   <script
@@ -57,10 +59,13 @@ src="https://cdn.plaid.com/link/v2/stable/link-initialize.js"></script>
           // }
         }
       });
-    
+
       $('#link-button').on('click', function(e) {
         handler.open();
       });
     })(jQuery);
   </script>
+  <%= link_to "Back", root_path, class:"Back" %>
+</div>
+  <br>
 </div>
