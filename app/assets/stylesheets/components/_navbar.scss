@@ -1,7 +1,7 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
-  margin-bottom: 35px;
+  margin-bottom: 60px;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -10,8 +10,11 @@
 
 .dropdown_style {
 font-weight: lighter;
-color: #D58B6A;
+color: #A1A98E;
 text-align: center;
+padding: 8px 12px;
+margin-top: 5px;
+font-size:
 
 &:hover {
   background-color: white !important;
@@ -20,6 +23,10 @@ text-align: center;
 
 .dropdown-menu {
 border-radius : 30px;
+min-width: 8rem;
 
 }
 
+.nav-item {
+  margin-top: 10px;
+}
