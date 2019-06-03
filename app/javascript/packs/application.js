@@ -8,5 +8,6 @@ new TypeIt('#heroImpact', {
   strings: ["This is a great string.", "But here is a better one."],
   speed: 50,
   breakLines: false,
-  waitUntilVisible: true
+  waitUntilVisible: true,
+  loop: true
 }).go();
