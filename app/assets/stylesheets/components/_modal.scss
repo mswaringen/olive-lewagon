@@ -54,3 +54,16 @@ border: none;
   background-color: none !important;
 }
 
+.ngo_modal_link {
+  color: black;
+
+  &:hover {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+
+.close {
+  margin: 0 0 0 0 !important;
+}
