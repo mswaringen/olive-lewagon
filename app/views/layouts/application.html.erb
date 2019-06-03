@@ -16,6 +16,7 @@
     <%= render 'shared/navbar' %>
     <% else %>
      <%= render 'shared/navbarnew' %>
+     <%= render 'shared/devise_modal' %>
      <% end %>
     <%= render 'shared/flashes' %>
     <div class="container-fluid">
@@ -24,5 +25,7 @@
 
     <%= javascript_include_tag 'application' %>
   </body>
+  <footer>
      <%= render 'shared/footer' %>
+   </footer>
 </html>

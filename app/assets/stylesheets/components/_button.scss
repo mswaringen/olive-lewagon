@@ -9,6 +9,9 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   text-align:center;
 }
+.ul-buttons{
+  width:100%;
+}
 
 .button-primary:hover {
   opacity: 1;
@@ -42,4 +45,60 @@
   opacity: 0.8;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   text-align:center;
+
 }
+
+  .button-primary:hover {
+  opacity: 1;
+  text-decoration: none;
+  color: white;
+  }
+
+
+.submit-form-button-primary {
+
+    color: white;
+    border-radius: 10px;
+    font-weight: lighter;
+    opacity: 0.8;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    text-align:center;
+    width: 85vh;
+    height: 50px;
+    background-color: #D58B6A;
+    overflow: hidden;
+    list-style-type: none;
+    text-decoration: none;
+
+}
+
+.sign-up-form-button-secondary {
+  background-color: white;
+  color: #D58B6A;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-weight: lighter;
+  opacity: 0.8;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  text-decoration: none;
+
+}
+
+.submit-form-button-secondary {
+
+    color: #D58B6A;
+    text-align:center;
+    width: 85vh;
+    height: 50px;
+    background-color:white;
+    overflow: hidden;
+    list-style-type: none;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: lighter;
+    opacity: 0.8;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border: solid 0.8px #D58B6A;
+
+  }
+
