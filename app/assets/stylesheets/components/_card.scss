@@ -146,7 +146,7 @@ border-radius: 10px;
   font-size: 32px;
   font-weight: bold;
   border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
 }
 
 .card-dashboard h1 {
@@ -156,13 +156,11 @@ border-radius: 10px;
 
 
 .card-activity {
-  background-size: cover;
-  background-position: center;
-  width: 300px;
-  color: black;
   border-radius: 8px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   outline-color: #84DC6E;
+  margin-top: 30px;
+  padding: 20px;
 }
 
 .card-activity ul {
@@ -170,25 +168,33 @@ border-radius: 10px;
 }
 
 .card-chart {
-  background-size: cover;
-  background-position: center;
-  height: 350px;
-  width: 600px;
-  color: black;
   border-radius: 8px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   outline-color: #84DC6E;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  padding-right: 15px;
+  padding-left: 10px;
+  margin: 30px 20px 30px 0px;
+}
+
+.card-chart h4 {
+  margin: 30px 30px 10px 30px;
+  color: #D58B6A;
+  letter-spacing: 0.04rem;
+  font-size: 1rem;
+  margin-bottom: 30px;
+  font-variant: all-petite-caps;
 }
 
 .card-impact {
-  background-size: cover;
-  background-position: center;
-  height: 150px;
-  width: 250px;
-  color: black;
+  padding-bottom: 20px;
   border-radius: 8px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   outline-color: #84DC6E;
+  padding-top: 5px;
+  padding-left: 10px;
+  margin-bottom: 10px;
 }
 
 .card-link {
@@ -220,7 +226,7 @@ border-radius: 10px;
 }
 
 .card-spend p {
-    margin: 30px 0px 10px 30px !important;
+  margin: 30px 0px 10px 30px !important;
   font-size: 0.9rem;
   letter-spacing: 0.005rem;
 }
