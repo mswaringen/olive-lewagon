@@ -7,25 +7,23 @@
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
-    <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
+    <%= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
     <%= javascript_pack_tag 'application' %>
   </head>
   <body>
-
     <% if user_signed_in? %>
-    <%= render 'shared/navbar' %>
+      <%= render 'shared/navbar' %>
     <% else %>
-     <%= render 'shared/navbarnew' %>
-     <%= render 'shared/devise_modal' %>
-     <% end %>
+      <%= render 'shared/navbarnew' %>
+      <%= render 'shared/devise_modal' %>
+    <% end %>
     <%= render 'shared/flashes' %>
     <div class="container-fluid">
-    <%= yield %>
+      <%= yield %>
     </div>
-
     <%= javascript_include_tag 'application' %>
   </body>
   <footer>
-     <%= render 'shared/footer' %>
-   </footer>
+    <%= render 'shared/footer' %>
+  </footer>
 </html>
