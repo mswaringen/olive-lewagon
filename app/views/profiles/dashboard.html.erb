@@ -58,22 +58,6 @@
     <br>
     <h4 class="second-text">NGO that you supported:</h4>
 
-    <div class="card-landing">
-      <%# @ngos.each do |ngo| %>
-        <div class="card-trip">
-          <%= link_to ngo_path(current_user.portfolios.last.ngo) do  %>
-            <div class="card-trip-image">
-              <%= image_tag current_user.portfolios.last.ngo.photo %>
-            </div>
-          <% end %>
-          <div class="card-trip-infos">
-            <div>
-              <h2 class="second-text"><%= current_user.portfolios.last.ngo.name %></h2>
-              <p><%= truncate current_user.portfolios.last.ngo.description, length: 150 %></p>
-            </div>
-
-  </div>
-
 <div class="row">
   <div class="col-4">
       <div class="card-trip">
