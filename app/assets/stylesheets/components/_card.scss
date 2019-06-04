@@ -140,7 +140,7 @@ border-radius: 10px;
   font-size: 32px;
   font-weight: bold;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .card-dashboard h1 {
@@ -159,6 +159,7 @@ border-radius: 10px;
 
 .card-activity ul {
   margin: 20px 20px 20px 20px;
+  padding-left: 10px;
 }
 
 .card-chart {
