@@ -16,8 +16,6 @@
 }
 
 #transaction-link {
-  display: flex;
-  justify-content: center;
 }
 
 #total-transactions {
@@ -40,4 +38,9 @@
 
 .donation {
   display: flex;
+}
+
+#card-spend-trans {
+  display: flex;
+  justify-content: space-evenly;
 }
