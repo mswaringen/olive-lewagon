@@ -29,3 +29,69 @@
   padding-left: 60px;
 }
 
+.chart {
+  display: flex;
+  justify-content: center
+}
+
+#chart-grid {
+  grid-area: chart;
+  background-color: white;
+}
+#activity-grid {
+  grid-area: activity;
+  margin-top: 0px;
+  align-self: start;
+  padding-bottom: 50px;
+  background-color: white;
+}
+
+#activity-grid li {
+    list-style-type: none;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 0.9rem
+}
+#impact-grid {
+  grid-area: impact;
+  background-color: white;
+}
+#sum-grid {
+  grid-area: sum;
+  background-color: white;
+}
+
+#ngo-grid {
+  grid-area: ngo;
+  width: 100%;
+  border-radius: 8px;
+}
+
+#social-grid {
+grid-area: social;
+text-align: center;
+padding-left: 0px;
+background-color: white;
+}
+
+.dash-grid {
+  display: grid;
+  margin-top: 20px;
+  grid-gap: 20px 50px;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 400px 200px 300px;
+  grid-template-areas:
+    "chart chart activity"
+    "impact sum activity"
+    "ngo social .";
+}
+
+.dash-body {
+  width: 100%;
+  height: 100%;
+  background: no-repeat image_url('dashboard_back.png');
+  background-position: 0% 0%;
+  background-size: contain;
+}

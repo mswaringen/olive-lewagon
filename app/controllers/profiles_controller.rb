@@ -10,9 +10,12 @@ class ProfilesController < ApplicationController
     # @transactions = @user.portfolios.map(&:transactions).flatten
 
     @transactions = Transaction.where(portfolios: { user_id: current_user.id }).joins(:portfolio)
-
     @amounts = []
-    @transaction_chart_data = @transactions.group_by_month(:transaction_date).sum(:amount_cents)
+    hsh = @transactions.group_by_month(:transaction_date).sum(:amount_cents)
+    hsh.each do |key, val|
+      hsh[key] = val.to_f/100
+    end
+    @transaction_chart_data = hsh
     @transaction_total = @transactions.sum(:amount_cents)
     @impact = BigDecimal.new(current_user.portfolios.find_by(status:'active').ngo.impact)
     # @user.portfolios.each do |port|
