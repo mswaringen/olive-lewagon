@@ -4,7 +4,8 @@
   margin-bottom: 60px;
   position: sticky;
   top:0px;
-opacity:0.99;
+  opacity:0.99;
+  z-index: 99999999;
 }
 
 .navbar-lewagon .navbar-collapse {

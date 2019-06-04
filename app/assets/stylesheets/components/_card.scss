@@ -261,3 +261,26 @@ padding-left: 50px;
 padding-top: 50px;
 padding-bottom: 50px;
 }
+
+.team-card-left{
+  background-size: cover;
+  background-position: center;
+  height: 150px;
+  width: 250px;
+  border: 0.8px;
+
+}
+
+.team-card-right{
+  background-size: cover;
+  background-position: center;
+  height: 150px;
+  width: 250px;
+  border: 0.8px;
+
+}
+.team-section {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
