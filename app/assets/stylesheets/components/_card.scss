@@ -1,10 +1,6 @@
 .card-category {
-  background-size: cover;
-  background-position: center;
-  height: 150px;
-  width: 250px;
-  color: black;
-  // text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  height: 100%;
+  width: 100%;
   border-radius: 8px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   outline-color: #84DC6E;
@@ -16,13 +12,11 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   width: 350px;
   border-radius: 20px;
+}
 
 .card-trip a {
  color: black;
-  }
 }
-
-
 
 .card-trip-image {
   position: relative;
