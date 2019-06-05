@@ -1,27 +1,27 @@
 <div class="modal fade" id="ngo_modal_<%= ngo.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
   aria-hidden="true">
-  <div class="modal-dialog" role="document" style="max-width: 800px">
+  <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 800px">
     <div class="modal-content">
       <div class="modal-header text-center">
-  <div class="card-large">
-    <div class="card-large-image">
-      <%= image_tag ngo.photo %>
-    </div>
+        <div class="card-large">
+          <div class="card-large-image">
+            <%= image_tag ngo.photo %>
+          </div>
 
-    <h1 class="show-title"><%= ngo.name %></h1>
-    <p class="ngo_description"><%= ngo.description %></p>
-    <p class="ngo_impact"> Impact: <%= ngo.impact %></p>
+          <h1 class="show-title"><%= ngo.name %></h1>
+          <p class="ngo_description"><%= ngo.description %></p>
+          <p class="ngo_impact"> Impact: <%= ngo.impact %></p>
 
-   <%= simple_form_for [ngo, portfolio] do |f|%>
-      <div class="button-show">
-         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <i class="fas fa-chevron-left"></i>
-        </button>
-        <%= f.submit class: "button-primary show-button" %>
+          <%= simple_form_for [ngo, portfolio] do |f|%>
+            <div class="button-show">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <i class="fas fa-chevron-left"></i>
+              </button>
+              <%= f.submit class: "button-primary show-button" %>
+            </div>
+          <% end %>
+        </div>
       </div>
-    <% end %>
+    </div>
   </div>
-</div>
-</div>
-</div>
 </div>
