@@ -1,24 +1,61 @@
-<h1><%= @user.first_name %>'s Dashboard</h1>
-<br>
-<h4>My NGO: <%= @user.portfolios.last.ngo.name %></h4>
-<h6>Impact: <%= @user.portfolios.last.ngo.impact %></h6>
-<h4>Recent Donations to <%= @user.portfolios.last.ngo.name %></h4>
-<ul>
-  <% @user.portfolios.last.transactions.each do |transaction|  %>
-    <% unless transaction.stripe_response.nil?  %>
-      <% stripe_response = ActiveSupport::JSON.decode(transaction.stripe_response) %>
-    <% end %>
-    <li>Payment Date: <%= transaction.created_at %></li>
-    <li>Status: <%= transaction.status %></li>
-    <li>Amount: <%= stripe_response["amount"]/100 %></li>
-    <li>Card Number: <%= stripe_response["last4"] %></li>
-  <% end %>
-</ul>
-<br>
-<br>
-<br>
-<br>
-<br>
-<h3>*** Stripe Response Data (pick what you need) ***</h3>
-<%= ActiveSupport::JSON.decode(@user.portfolios.last.transactions.last.stripe_response)%>
-<!-- ActiveSupport::JSON.decode(Transaction.last.stripe_response)["description"] -->
+<% content_for :dashboard, render('shared/navbar_dash') %>
+<div class="dash-body">
+  <div class="container">
+    <div class=row>
+      <div class="col-12">
+        <h1 class="show-title" >Hey <%= current_user.first_name %>!</h1>
+      </div>
+    </div>
+    <div class="dash-grid">
+      <div class="card-impact" id="chart-grid">
+        <h4 id="activity-title">Your Giving History</h4>
+        <div class="chart">
+          <%= column_chart [
+           { data: @transaction_chart_data } ], colors: ["#72b39f"] , width: "625px", legend: false, prefix: "$", defer:true  %>
+        </div>
+      </div>
+      <div class="card-activity" id="activity-grid">
+        <h4 id="activity-title">Monthly Activity</h4>
+        <ul>
+          <% @transactions.reverse_each do |t| %>
+            <li>
+              <strong>$<%= t.amount %></strong>
+              donated to <strong><%= t.portfolio.ngo.name %></strong> on <%= t.transaction_date %>
+              <% unless t.stripe_response.nil?  %>
+                <% stripe_response = ActiveSupport::JSON.decode(t.stripe_response) %>
+                <%= link_to "Receipt", stripe_response["receipt_url"], target: :_blank %>
+              <% end %>
+            </li>
+            <br>
+          <% end %>
+        </ul>
+      </div>
+      <div class="card-impact" id="impact-grid">
+        <h2 class="number-card"><%= (@impact * (@transaction_total/100)).round %>
+        </h2>
+        <p class="three-step"><%= current_user.portfolios.last.ngo.impact_description %></p>
+      </div>
+      <div class="card-impact" id="sum-grid">
+        <h2 class="number-card-two">$ <%= @transaction_total/100.round %></h2>
+        <p class="three-step">Your Lifetime Donation Total</p>
+      </div>
+      <div class="card-trip" id="ngo-grid">
+        <%= link_to ngo_path(current_user.portfolios.last.ngo) do  %>
+          <div class="card-trip-image">
+            <%= image_tag current_user.portfolios.last.ngo.photo %>
+          </div>
+        <% end %>
+        <div class="card-trip-infos">
+          <div>
+            <h2 class="second-text"><%= current_user.portfolios.last.ngo.name %></h2>
+            <p><%= truncate current_user.portfolios.last.ngo.description, length: 50 %></p>
+          </div>
+        </div>
+      </div>
+      <div class="card-impact" id="social-grid">
+        <h4 id="activity-title" style="margin: 20px;">Share your cause with friends</h4>
+        <%= social_share_button_tag([current_user.portfolios.last.ngo.photo, current_user.portfolios.last.ngo.name, current_user.portfolios.last.ngo.description], :allow_sites => %w(twitter facebook whatsapp_web email)) %>
+      </div>
+    </div>
+  </div>
+</div>

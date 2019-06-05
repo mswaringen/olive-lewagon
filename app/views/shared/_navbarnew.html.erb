@@ -1,0 +1,45 @@
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+
+
+    <div>
+    <%= link_to root_path, class: "navbar-brand" do %>
+    <%= image_tag "logo_small.png", style: "width:145px; margin-top: 10px; margin-left: 20px;" %>
+    <% end %>
+    </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon "></span>
+  </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <div class=" nav-item dropdown">
+            <div class="btn-group">
+                <div class="nav-item active">
+                <%= link_to "About us", aboutus_path, class: "dropdown-item dropdown_style" %>
+                </div>
+                <div class="nav-item active">
+                <%= link_to "NGOs", ngos_path, class: "dropdown-item dropdown_style" %>
+                </div>
+
+                <div class= "buttons navbar">
+
+                <%= link_to "Sign up", new_user_registration_path, class: "button-primary button-primary:hover" %>
+                <button class="button-secondary button-secondary:hover" style="margin-left:10px;" data-toggle="modal" data-target="#modalRegisterForm" > Login
+                </button>
+                <div>
+
+              </div>
+            </div>
+         </div>
+        </ul>
+  </div>
+
+
+
+</div>
+
+
+
+
+

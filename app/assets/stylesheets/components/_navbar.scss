@@ -1,9 +1,35 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
+  margin-bottom: 60px;
+  position: sticky;
+  top:0px;
+  opacity:0.99;
+  z-index: 99999999;
 }
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
 
+.dropdown_style {
+font-weight: lighter;
+color: #A1A98E;
+text-align: center;
+padding: 8px 12px;
+margin-top: 5px;
+
+&:hover {
+  background-color: white !important;
+}
+}
+
+.dropdown-menu {
+border-radius : 30px;
+min-width: 8rem;
+
+}
+
+.nav-item {
+  margin-top: 10px;
+}

@@ -1,13 +1,19 @@
-<h2>Sign up</h2>
-
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
+<div class="card-sign-up">
+<div class="card-intro">
+   <h1 class="header-text">Create  An  Account &  Join Us on A Mission</h1>
+   <ul class="body-text">
+    When you create an account in Olive, you are committed to create an impact every month. We will help you to round up your monthly spend and donate automatically to your preferable NGO. You can check impact that you created every month in your NGO portfolio.
+  </ul>
+</div>
+  <div class="card-form-signup form-inputs registration-text d-flex flex-column ">
+    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= f.error_notification %>
     <%= f.input :email,
                 required: true,
                 autofocus: true,
-                input_html: { autocomplete: "email" }%>
+                input_html: { autocomplete: "email" }
+              %>
+
     <%= f.input :password,
                 required: true,
                 hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
@@ -15,11 +21,11 @@
     <%= f.input :password_confirmation,
                 required: true,
                 input_html: { autocomplete: "new-password" } %>
-  </div>
 
-  <div class="form-actions">
+    <div class="submit-button-primary submit-button:hover form-actions mx-auto" style="width: 200px;">
     <%= f.button :submit, "Sign up" %>
+    </div>
   </div>
 <% end %>
+</div>
 
-<%= render "devise/shared/links" %>

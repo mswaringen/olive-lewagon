@@ -7,6 +7,10 @@
   font-weight: lighter;
   opacity: 0.8;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  text-align:center;
+}
+.ul-buttons{
+  width:100%;
 }
 
 .button-primary:hover {
@@ -18,11 +22,12 @@
 .button-secondary {
   background-color: white;
   color: #D58B6A;
-  padding: 12px 24px;
+  padding: 10px 30px;
   border-radius: 10px;
   font-weight: lighter;
   opacity: 0.8;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+  border-color: #D58B6A;
 }
 
 .button-secondary:hover {
@@ -30,3 +35,82 @@
   text-decoration: none;
   font-weight: lighter;
 }
+
+.submit-button-primary {
+  width: 250px;
+  background-color: #D58B6A;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-weight: lighter;
+  opacity: 0.8;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  text-align:center;
+
+}
+
+.button-primary:hover {
+  opacity: 1;
+  text-decoration: none;
+  color: white;
+}
+
+
+.submit-form-button-primary {
+
+  color: white;
+  border-radius: 10px;
+  font-weight: lighter;
+  opacity: 0.8;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  text-align:center;
+  width: 85vh;
+  height: 50px;
+  background-color: #D58B6A;
+  overflow: hidden;
+  list-style-type: none;
+  text-decoration: none;
+
+}
+
+.sign-up-form-button-secondary {
+  background-color: white;
+  color: #D58B6A;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-weight: lighter;
+  opacity: 0.8;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  text-decoration: none;
+
+}
+
+.submit-form-button-secondary {
+
+  color: #D58B6A;
+  text-align:center;
+  width: 85vh;
+  height: 50px;
+  background-color:white;
+  overflow: hidden;
+  list-style-type: none;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: lighter;
+  opacity: 0.8;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border: solid 0.8px #D58B6A;
+
+}
+
+.modal-header .close {
+  color: #D58B6A;
+  display:flex;
+
+}
+
+.show-button {
+  margin-left: auto !important;
+}
+
+

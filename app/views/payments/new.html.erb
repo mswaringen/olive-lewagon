@@ -1,7 +1,14 @@
-<h1>Make a Donation to <%= @transaction.portfolio.ngo.name %></h1>
+<div class="container" id="payment-con">
+
+<!-- title -->
+<h1 align="center" class="third-text" id="make-donation">Make a Donation to <%= @transaction.portfolio.ngo.name %></h1>
+
+<!-- payment & button -->
+<div class="amount-button" align="center">
+
 <%= form_tag payments_path do %>
   <article>
-    <label class="amount">
+    <label class="amount" id="amount-donation">
       <span>Amount: <%= humanized_money_with_symbol(@transaction.amount) %></span>
     </label>
   </article>
@@ -11,5 +18,8 @@
     data-email="<%= current_user.email %>"
     data-description="Donation to <%= @transaction.portfolio.ngo.name %>"
     data-amount="<%= @transaction.amount_cents %>"
-    data-currency="<%= @transaction.amount.currency %>"></script>
+    data-currency="<%= @transaction.amount.currency %>"
+    ></script>
 <% end %>
+</div>
+</div>
