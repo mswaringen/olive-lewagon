@@ -14,6 +14,7 @@ margin-bottom: 20px;
 
 #payment-con {
   text-align: center;
+  max-width: 600px;
 }
 
 #button-con {
@@ -22,4 +23,20 @@ margin-bottom: 20px;
 
 #con-text {
   text-align: center;
+}
+
+#con-page {
+  text-align: center;
+}
+
+#receipt {
+  width: 400px;
+  padding: 20px 50px;
+  margin-bottom: 50px;
+}
+
+#receipt p {
+  color: grey;
+  font-size: 1.2rem;
+  text-align: start;
 }
