@@ -29,7 +29,7 @@
         <p>We did the math. Rounding up your spare change for charity can have a big impact on society. Help support your favorite NGO by subscribing now!</p>
         <%= simple_form_for @transaction, url: round_ups_path, id: "donate_field", method: :post do |f| %>
           <%= f.hidden_field :amount, value: @total_round_up %>
-          <%= f.submit "Subscribe", class: "button-primary btn-donate ", id:"submit-link"%>
+          <%= f.submit "Subscribe", class: "button-primary btn-lg ", id:"submit-link"%>
         <% end %>
         </div>
       </div>

@@ -1,11 +1,31 @@
 <div class="container">
   <br>
-  <h1 class="third-text" align="center" id="link-title">Link your Debit/Credit Card Account</h1>
-  <br>
+  <h1 class="show-title" align="center">Link Your Card</h1>
+  <h1 class="third-text" align="center" id="link-title">Round Up Your Digital Spare Change</h1>
+
+
+
+<div id="how_to_link">
+
+<div class="card-impact how_to_card">
+  <h2 class="number-card">1.</h2>
+    <h6>Securely sign into your credit or debit card account</h6>
+  </div>
+   <div class="card-impact how_to_card">
+    <h2 class="number-card">2.</h2>
+    <h6>Olive downloads your recent transactions, computing your digital spare change</h6>
+  </div>
+   <div class="card-impact how_to_card">
+    <h2 class="number-card">3.</h2>
+    <h6>We repeat this process monthly, never storing personal user data</h6>
+  </div>
+
+</div>
+
 <div class="card-link">
 
-  <h5>We need to access the last 30 days of debit or credit card transactions you have made, so we can calculate your digital spare change! Please link your account below. We promise no personal information will be stored.</h5>
-  <button id="link-button" class="button-primary">Link Account</button>
+
+  <button id="link-button" class="button-primary btn-lg">Link Account</button>
   <script
 src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
   <script
@@ -65,7 +85,7 @@ src="https://cdn.plaid.com/link/v2/stable/link-initialize.js"></script>
       });
     })(jQuery);
   </script>
-  <%= link_to "Back", root_path, class:"Back" %>
+
 </div>
   <br>
 </div>
