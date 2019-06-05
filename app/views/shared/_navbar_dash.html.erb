@@ -1,0 +1,33 @@
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon "></span>
+  </button>
+  <div>
+    <%= link_to root_path, class: "navbar-brand" do %>
+      <%= image_tag "logo_small.png", style: "width:145px; margin-top: 10px; margin-left: 20px;" %>
+    <% end %>
+  </div>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <div class=" nav-item dropdown">
+        <div class="btn-group">
+          <div class="nav-item active">
+            <%= link_to "Edit Profile", edit_user_registration_path, class: "dropdown-item dropdown_style" %>
+          </div>
+          <div class="nav-item active">
+            <%= link_to "Change your NGO", ngos_path, class: "dropdown-item dropdown_style" %>
+          </div>
+          <div class="nav-item active">
+            <%= link_to "Linked Account", '#', class: "dropdown-item dropdown_style" %>
+          </div>
+          <div class="nav-item active">
+            <%= link_to "Payment Method", '#', class: "dropdown-item dropdown_style" %>
+          </div>
+          <div class="nav-item active">
+            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item dropdown_style" %>
+          </div>
+        </div>
+      </div>
+    </ul>
+  </div>
+</div>

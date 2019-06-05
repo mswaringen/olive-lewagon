@@ -1,19 +1,27 @@
-<div class="container con-show">
-<div class="card-large">
-  <div class="card-large-image">
+  <div class="container con-show">
 
-<%= image_tag @ngo.photo %>
+  <div class="modal fade " id="modalRegisterForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+  <div class="card-large">
+    <div class="card-large-image">
+      <%= image_tag @ngo.photo %>
+    </div>
+
+    <h1 class="show-title"><%= @ngo.name %></h1>
+    <p><%= @ngo.description %></p>
+    <p>Impact: <%= @ngo.impact %></p>
+    <%= simple_form_for [@ngo, @portfolio] do |f|%>
+      <div class="button-show">
+        <%= f.submit class: "button-primary show-button" %>
+
+      </div>
+    <% end %>
   </div>
-<h1 class="show-title"><%= @ngo.name %></h1>
-<p><%= @ngo.description %></p>
-<p>Impact: <%= @ngo.impact %></p>
-<%= simple_form_for [@ngo, @portfolio] do |f|%>
-<div class="button-show">
-
-  <%= f.submit class: "button-primary show-button" %>
-  <br>
-<%= link_to "Back", root_path %>
-<% end %>
+</div>
+</div>
 </div>
 </div>
 </div>
