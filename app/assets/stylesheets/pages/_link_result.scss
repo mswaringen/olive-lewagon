@@ -1,0 +1,83 @@
+.result-body {
+  width: 100%;
+  height: 100%;
+  background: no-repeat image_url('back-2.png');
+  background-position: 0% 0%;
+  background-size: contain;
+}
+
+.result-grid {
+  display: grid;
+  margin-top: 20px;
+  grid-gap: 20px 50px;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr 300px;
+  grid-template-rows: 200px 200px 200px 200px;
+  grid-template-areas:
+    "t_count t_sum t_round  t_hist"
+    "donate  donate donate t_hist"
+    "donate  donate donate t_hist"
+    ".  . . t_hist";
+}
+
+#t_count {
+  grid-area: t_count;
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+#t_sum {
+  grid-area: t_sum;
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+#t_round {
+  grid-area: t_round;
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+#t_hist {
+  grid-area: t_hist;
+  margin-top: 0px;
+  align-self: start;
+  padding-bottom: 50px;
+  background-color: white;
+}
+
+#t_hist li {
+    list-style-type: none;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    padding: 15px 20px;
+    font-size: 0.9rem
+}
+
+#t_hist li p {
+  margin-bottom: 0px;
+  margin-left: 30px;
+}
+
+#donate {
+  grid-area: donate;
+  background-color: white;
+}
+
+#flex_desc {
+  display: flex;
+  align-items: center;
+  margin: 0px 30px;
+}
+
+#donate_field {
+  margin: 0px;
+}
+
+.btn-donate {
+  margin: 0px;
+  padding: 20px 50px;
+}
