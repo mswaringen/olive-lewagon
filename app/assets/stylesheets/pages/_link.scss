@@ -3,7 +3,13 @@
 }
 
 #link-button {
-  margin: 0px 0px 30px 200px;
+
+}
+
+.card-link {
+  display: flex;
+    justify-content: center;
+    padding: 50px;
 }
 
 .Back {
@@ -43,4 +49,21 @@
 #card-spend-trans {
   display: flex;
   justify-content: space-evenly;
+}
+
+#how_to_link {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.how_to_card {
+  padding: 25px;
+  max-width: 250px;
+}
+
+
+.how_to_card h6 {
+  color: grey;
+  padding: 20px;
+  font-size: 1.2rem;
 }
