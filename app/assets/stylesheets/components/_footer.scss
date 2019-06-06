@@ -1,10 +1,8 @@
 .footer-copyright {
-text-align: center;
-letter-spacing: 2px;
-margin-top: 40px;
-margin-bottom: 40px;
-color: #4B6362;
 
+  text-align: center;
+  letter-spacing: 2px;
+  color: #4B6362;
 
 }
 
@@ -13,5 +11,10 @@ color: #4B6362;
 }
 
 .footer {
-padding: 20px;
+  //position: absolute;
+  padding: 20px;
+  margin-top: 25px;
+  bottom: 0;
+  margin: 0 auto;
+  width:100%;
 }
