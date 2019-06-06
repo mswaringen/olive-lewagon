@@ -1,7 +1,7 @@
 .edit_profile {
 
-  width: 120%;
-  height: 620px;
+  width: 100%;
+  height: 650px;
   background-color: transparent;
   background-image: image_url('dashboard_back.png');
   background-size: contain;
@@ -17,10 +17,10 @@
 }
 
 .back-option {
-margin-right: 60px;
-display: flex;
- justify-content: space-between;
- list-style: none;
+  margin-right: 60px;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
 
 }
 
@@ -38,7 +38,7 @@ display: flex;
 }
 
 #button-update:hover {
-    opacity: 1;
+  opacity: 1;
   text-decoration: none;
   font-weight: lighter;
 }
@@ -46,7 +46,7 @@ display: flex;
 
 #profile_title {
   color: #D58B6A;
-
+  margin-left: 276px !important;
 }
 
 .back-icon {
@@ -56,7 +56,7 @@ display: flex;
 }
 
 .cancel {
-  margin-right: 150px;
+  margin-right: 74px;
   font-size: 13px;
   font-family: Montserrat;
   color: #A1A98E;
@@ -94,7 +94,20 @@ background-color: #D58B6A;
 display: -webkit-inline-box;
 width:180px;
 padding: 6px 35px 7px 45px;
-margin-top: 20px;
-margin-left: 68px;
+margin-top: 33px;
+margin-bottom: 8px;
+margin-left: 115px;
 
+}
+
+
+.form-edit {
+    width: 436px !important;
+    padding: none;
+}
+
+.sad-icon {
+  color: #A1A98E;
+  font-size: 20px;
+  margin-right: 15px;
 }
