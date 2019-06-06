@@ -13,12 +13,12 @@
         <p>Total Transactions</p>
       </div>
       <div class="card-impact" id="t_sum">
-        <h2 class="number-card"><%= money_without_cents_and_with_symbol(@total_spend) %>
+        <h2 class="number-card">$<%= money_without_cents(@total_spend) %>
         </h2>
         <p>Total Spend</p>
       </div>
       <div class="card-impact" id="t_round">
-        <h2 class="number-card"><%= humanized_money_with_symbol(@total_round_up) %>
+        <h2 class="number-card">$<%= humanized_money(@total_round_up) %>
         </h2>
         <p>Your Digital Change</p>
       </div>
@@ -44,8 +44,8 @@
 
       <strong><%= t.name %></strong>
       <p>Date: <%= t.date  %></p>
-      <p>Amount: <%= humanized_money_with_symbol(amount)  %></p>
-      <p>Digital Change: <%= humanized_money_with_symbol(round_up)  %></p>
+      <p>Amount: $<%= humanized_money(amount)  %></p>
+      <p>Digital Change: $<%= humanized_money(round_up)  %></p>
     </li>
     <br>
     <% end %>

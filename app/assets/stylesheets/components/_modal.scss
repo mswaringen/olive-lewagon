@@ -63,7 +63,15 @@ border: none;
   }
 }
 
+.modal-form {
+  display: flex;
+  justify-content: center;
+}
 
 .close {
   margin: 0 0 0 0 !important;
+}
+
+.impact-title {
+  color: #72B39F;
 }
