@@ -1,4 +1,10 @@
 import "bootstrap";
+<<<<<<< HEAD
+import TypeIt from 'typeit';
+require("chartkick")
+require("chart.js")
+
+=======
 
 require("chartkick")
 require("chart.js")
@@ -15,3 +21,4 @@ import TypeIt from 'typeit';
     loopDelay: 2000
   }).go();
 })();
+>>>>>>> 4d134d48243a0fb1d2896a641bc0b2b03d90e610
