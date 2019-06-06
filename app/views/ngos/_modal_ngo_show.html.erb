@@ -10,16 +10,14 @@
 
           <h1 class="show-title"><%= ngo.name %></h1>
           <p class="ngo_description"><%= ngo.description %></p>
-          <p class="ngo_impact"> Impact: <%= ngo.impact %></p>
-
+          <h5 class="impact-title"><strong>Impact:</strong> <%= ngo.impact_description %></h5>
+          <div class="modal-form">
           <%= simple_form_for [ngo, portfolio] do |f|%>
             <div class="button-show">
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <i class="fas fa-chevron-left"></i>
-              </button>
-              <%= f.submit class: "button-primary show-button" %>
+              <%= f.submit class: "button-primary btn-lg show-button" %>
             </div>
           <% end %>
+        </div>
         </div>
       </div>
     </div>

@@ -4,7 +4,7 @@
 // 3. You can override them below!
 
 // General style
-$font-family-montserrat:  $body-font;
+$font-family-sans-serif:  $body-font;
 $headings-font-family:    $headers-font;
 $body-bg:                 $light-gray;
 $font-size-base: 1rem;
@@ -23,3 +23,12 @@ $border-radius-lg: 2px;
 $border-radius-sm: 2px;
 
 // Override other variables below!
+
+$brand-primary: #72B39F;
+
+//** Global textual link color.
+$link-color:            darken($brand-primary, 15%) !default;
+//** Link hover color set via `darken()` function.
+$link-hover-color:      darken($link-color, 30%) !default;
+//** Link hover decoration.
+$link-hover-decoration: none !default;
