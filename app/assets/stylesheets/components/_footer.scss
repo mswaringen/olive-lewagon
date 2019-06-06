@@ -11,10 +11,16 @@
 }
 
 .footer {
-  //position: absolute;
+  position: absolute;
+  bottom: 0;
+  height: 60px;
   padding: 20px;
   margin-top: 25px;
   bottom: 0;
   margin: 0 auto;
   width:100%;
+}
+
+body {
+  min-height: 100vh;
 }
