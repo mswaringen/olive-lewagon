@@ -1,42 +1,56 @@
 <div class="container">
-  <br>
-  <h1 class="show-title" align="center">Link Your Card</h1>
-  <h1 class="third-text" align="center" id="link-title">Round Up Your Digital Spare Change</h1>
+<!--   <div class="row">
+
+    <div class="col-md-6"> -->
+
+      <br>
+      <h1 class="show-title" align="center">Link Your Card</h1>
+      <h1 class="third-text" align="center" id="link-title">Round Up Your Digital Spare Change</h1>
 
 
 
-<div id="how_to_link">
+      <div id="how_to_link" align="center">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card-impact how_to_card card-steps">
+              <h2 class="number-card">1</h2>
+              <h6>Securely sign into your credit or debit card account</h6>
+            </div>
+          </div>
 
-<div class="card-impact how_to_card">
-  <h2 class="number-card">1.</h2>
-    <h6>Securely sign into your credit or debit card account</h6>
-  </div>
-   <div class="card-impact how_to_card">
-    <h2 class="number-card">2.</h2>
-    <h6>Olive downloads your recent transactions, computing your digital spare change</h6>
-  </div>
-   <div class="card-impact how_to_card">
-    <h2 class="number-card">3.</h2>
-    <h6>We repeat this process monthly, never storing personal user data</h6>
-  </div>
+          <div class="col-md-4">
+            <div class="card-impact how_to_card card-steps">
+              <h2 class="number-card">2</h2>
+              <h6>Olive downloads your recent transactions, computing your digital spare change</h6>
+            </div>
+          </div>
 
-</div>
+          <div class="col-md-4">
 
-<div class="card-link">
+            <div class="card-impact how_to_card card-steps">
+              <h2 class="number-card">3</h2>
+              <h6>We repeat this process monthly, never storing personal user data</h6>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="card-link">
 
 
-  <button id="link-button" class="button-primary btn-lg">Link Account</button>
-  <script
-src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
-  <script
-src="https://cdn.plaid.com/link/v2/stable/link-initialize.js"></script>
-  <script type="text/javascript">
-    (function($) {
-      var handler = Plaid.create({
-        clientName: 'Olive',
-        env: '<%= ENV["PLAID_ENV"] %>',
-        key: '<%= ENV["PLAID_PUBLIC_KEY"] %>',
-        product: ['transactions'],
+        <button id="link-button" class="button-primary btn-lg">Link Account</button>
+        <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+        <script
+        src="https://cdn.plaid.com/link/v2/stable/link-initialize.js"></script>
+        <script type="text/javascript">
+          (function($) {
+            var handler = Plaid.create({
+              clientName: 'Olive',
+              env: '<%= ENV["PLAID_ENV"] %>',
+              key: '<%= ENV["PLAID_PUBLIC_KEY"] %>',
+              product: ['transactions'],
         // Optional – use webhooks to get transaction and error updates
         webhook: 'https://requestb.in',
         onLoad: function() {
@@ -55,7 +69,7 @@ src="https://cdn.plaid.com/link/v2/stable/link-initialize.js"></script>
             function () {
               window.location.replace('/link_result');
             }
-          );
+            );
         },
         onExit: function(err, metadata) {
           // The user exited the Link flow.
@@ -80,12 +94,14 @@ src="https://cdn.plaid.com/link/v2/stable/link-initialize.js"></script>
         }
       });
 
-      $('#link-button').on('click', function(e) {
-        handler.open();
-      });
-    })(jQuery);
-  </script>
+            $('#link-button').on('click', function(e) {
+              handler.open();
+            });
+          })(jQuery);
+        </script>
 
-</div>
-  <br>
-</div>
+      </div>
+      <br>
+    </div>
+<!--   </div>
+</div> -->
