@@ -1,18 +1,18 @@
 .modal-content {
-background: #FFFFFF;
-box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
-border-radius: 10px;
+  background: #FFFFFF;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
 }
 
 .modal-title {
-font-family: Montserrat;
-font-style: normal;
-font-weight: 550;
-font-size: 24px;
-line-height: 29px;
-color: #A1A98E;
-margin-top: 40px;
-width: 100%;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 550;
+  font-size: 24px;
+  line-height: 29px;
+  color: #A1A98E;
+  margin-top: 40px;
+  width: 100%;
 }
 
 .modal-header {
@@ -21,28 +21,27 @@ width: 100%;
 }
 
 .form-control-label {
-color: #A1A98E;
-font-family: Montserrat;
+  color: #A1A98E;
+  font-family: Montserrat;
 
 }
 
 .form-control {
-width: 325px;
-height: 40px;
-left: 422px;
-top: 467.5px;
-border-bottom: 0.5px solid #535353;
-border-right: 0px solid white;
-border-left: 0px solid white;
-border-top: 0px solid white;
-padding: 1.2rem 1rem;
-background-color: white;
-overflow: hidden;
+  width: 325px;
+  height: 40px;
+  left: 422px;
+  top: 467.5px;
+  border-bottom: 0.5px solid #535353;
+  border-right: 0px solid white;
+  border-left: 0px solid white;
+  border-top: 0px solid white;
+  padding: 1.2rem 1rem;
+  background-color: white;
+  overflow: hidden;
 }
 
-
 .modal-footer {
-border: none;
+  border: none;
 }
 
 .form-check-label {
@@ -56,7 +55,6 @@ border: none;
 
 .ngo_modal_link {
   color: black;
-
   &:hover {
     text-decoration: none;
     color: black;
@@ -71,7 +69,6 @@ border: none;
 .close {
   margin: 0 0 0 0 !important;
 }
-
 
 .impact-title {
   color: #72B39F;

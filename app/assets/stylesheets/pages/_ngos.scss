@@ -1,0 +1,38 @@
+@include media-breakpoint-down(sm) {
+  #index-ngos {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 250px;
+  }
+
+  #index-page {
+    flex-basis: 50%;
+    margin-top: 20px;
+  }
+
+  .card-trip {
+    overflow: unset;
+    background: white;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    border-radius: 20px;
+    margin-top: 100px;
+  }
+
+  .card-trip-image {
+    width: 270px;
+    height: 200px;
+  }
+
+  .card-landing {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 100px 0px;
+    align-items: flex-end;
+    margin: 0px;
+  }
+}
+
+@include media-breakpoint-up(sm) {
+
+}
