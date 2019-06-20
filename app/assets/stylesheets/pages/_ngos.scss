@@ -1,5 +1,5 @@
 @include media-breakpoint-down(sm) {
-  #index-ngos {
+  .index-ngos {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;

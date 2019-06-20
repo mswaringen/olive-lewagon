@@ -1,28 +1,25 @@
+<div class="jumbotron-three" id="hero-3">
   <div class="container">
-    <div class="jumbotron-three">
-
-      <h1 class="show-title" align="center">Choose an NGO that you love</h1>
-
-      <div class="card-landing">
-        <div class="row justify-content-center">
-          <% @ngos.each do |ngo| %>
-          <div class="col-md-6">
-            <%= link_to ngo_path(ngo), class: "ngo_modal_link", data: { toggle: "modal", target: "#ngo_modal_#{ngo.id}" } do  %>
-              <div class="card-trip card-home">
-                <div class="card-trip-image">
-                  <%= image_tag ngo.photo %>
-                </div>
-
-                <div class="card-trip-infos">
-                  <h2 class="second-text"><%= ngo.name %></h2>
-                  <p id="index-ngos" class="d-none d-lg-block"><%= truncate ngo.description, length: 150 %></p>
-                </div>
-              </div>
-            <% end %>
-            <%= render 'modal_ngo_show', ngo: ngo, portfolio: Portfolio.new %>
+    <h1 class="show-title" align="center">Choose an NGO that you love</h1>
+    <div class="row justify-content-between">
+      <% @ngos.each do |ngo| %>
+      <div class="col-md-6">
+        <%= link_to ngo_path(ngo), data: { toggle: "modal", target: "#ngo_modal_#{ngo.id}" } do  %>
+        <div class="card-container">
+          <div class="card-trip card-home">
+            <div class="card-trip-image">
+              <%= image_tag ngo.photo %>
+            </div>
+            <div class="card-trip-infos">
+              <h2 class="second-text"><%= ngo.name %></h2>
+              <p class="index-ngos d-none d-lg-block"><%= truncate ngo.description, length: 100 %></p>
+            </div>
           </div>
-          <% end %>
         </div>
+        <% end %>
       </div>
+      <%= render 'ngos/modal_ngo_show', ngo: ngo, portfolio: Portfolio.new %>
+      <% end %>
     </div>
   </div>
+</div>

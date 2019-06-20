@@ -8,7 +8,7 @@
             <%= image_tag ngo.photo %>
           </div>
 
-          <h1 class="show-title"><%= ngo.name %></h1>
+          <h1 class="show-title modal-title"><%= ngo.name %></h1>
           <p class="ngo_description"><%= ngo.description %></p>
           <h5 class="impact-title"><strong>Impact:</strong> <%= ngo.impact_description %></h5>
           <div class="modal-form">
@@ -16,7 +16,9 @@
             <div class="button-show">
               <%= f.submit class: "button-primary btn-lg show-button" %>
             </div>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
           <% end %>
+
         </div>
         </div>
       </div>
