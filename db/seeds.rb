@@ -46,15 +46,15 @@ ingo = Ngo.create!(
 photo: 'https://www.aljazeera.com/mritems/imagecache/mbdxxlarge/mritems/Images/2018/12/25/0bb73d18436348deac7f5a385a671a4f_18.jpg')
 
 puts 'Creating users...'
-mark = User.new(email: 'mark@olive.com', first_name: 'Mark', password: 'topsecret', password_confirmation: 'topsecret')
+mark = User.new(email: 'mark@olive.gives', first_name: 'Mark', password: 'topsecret', password_confirmation: 'topsecret')
 mark.save(validate: false)
-marisa = User.new(email: 'marisa@olive.com', first_name: 'Marisa', password: 'topsecret', password_confirmation: 'topsecret')
+marisa = User.new(email: 'marisa@olive.gives', first_name: 'Marisa', password: 'topsecret', password_confirmation: 'topsecret')
 marisa.save(validate: false)
-antoinette = User.new(email: 'antoinette@olive.com', first_name: 'Antoinette', password: 'topsecret', password_confirmation: 'topsecret')
+antoinette = User.new(email: 'antoinette@olive.gives', first_name: 'Antoinette', password: 'topsecret', password_confirmation: 'topsecret')
 antoinette.save(validate: false)
-testing = User.new(email: 'test@olive.com', first_name: 'Test', password: 'topsecret', password_confirmation: 'topsecret')
+testing = User.new(email: 'test@olive.gives', first_name: 'Test', password: 'topsecret', password_confirmation: 'topsecret')
 testing.save(validate: false)
-fakename = User.new(email: 'fakename@olive.com', first_name: 'Fakename', password: 'topsecret', password_confirmation: 'topsecret')
+fakename = User.new(email: 'demo@olive.gives', first_name: 'Tomas', password: 'topsecret', password_confirmation: 'topsecret')
 fakename.save(validate: false)
 
 

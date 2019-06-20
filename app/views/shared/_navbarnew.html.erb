@@ -1,43 +1,48 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
 
 
-    <div>
+  <div>
     <%= link_to root_path, class: "navbar-brand" do %>
     <%= image_tag "logo_small.png", style: "width:145px; margin-top: 10px; margin-left: 20px;" %>
     <% end %>
-    </div>
+  </div>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon "></span>
   </button>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <div class=" nav-item dropdown">
-            <div class="btn-group">
-                <div class="nav-item active">
-                <%= link_to "About us", aboutus_path, class: "dropdown-item dropdown_style" %>
-                </div>
-                <div class="nav-item active">
-                <%= link_to "Choose your NGO", ngos_path, class: "dropdown-item dropdown_style" %>
-                </div>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <div class=" nav-item dropdown">
+        <div class="btn-group">
+          <div class="nav-item active">
+            <%= link_to "About us", aboutus_path, class: "dropdown-item dropdown_style" %>
+          </div>
+          <div class="nav-item active">
+            <%= link_to "Choose your NGO", ngos_path, class: "dropdown-item dropdown_style" %>
+          </div>
 
-                <div class= "buttons navbar">
+          <div class= "buttons navbar">
 
-                <%= link_to "Sign up", new_user_registration_path, class: "button-primary button-primary:hover" %>
-                <button class="button-secondary button-secondary:hover" style="margin-left:10px;" data-toggle="modal" data-target="#modalRegisterForm" > Login
-                </button>
-                <div>
-
-              </div>
+            <%= link_to "Sign up", new_user_registration_path, class: "button-primary button-primary:hover" %>
+            <div class="d-sm-none">
+              <%= link_to "Login", new_user_session_path, class: "button-secondary button-secondary:hover" %>
             </div>
-         </div>
-        </ul>
+            <div class="d-none d-md-block">
+              <button class="button-secondary button-secondary:hover" style="margin-left:10px;" data-toggle="modal" data-target="#modalRegisterForm" > Login
+              </button>
+            </div>
+            <div>
+
+            </div>
+          </div>
+        </div>
+      </ul>
+    </div>
+
+
+
   </div>
-
-
-
-</div>
 
 
 
