@@ -3,11 +3,11 @@
   <div class="container">
     <div class=row>
       <div class="col-12">
-        <h1 class="show-title" >Hey <%= current_user.first_name %>!</h1>
+        <h1 class="show-title" >Hi <%= current_user.first_name %>!</h1>
       </div>
     </div>
     <div class="dash-grid">
-      <div class="card-impact" id="chart-grid">
+      <div class="card-impact d-none d-md-block" id="chart-grid">
         <h4 id="activity-title">Your Giving History</h4>
         <div class="chart">
           <%= column_chart [
@@ -15,9 +15,9 @@
         </div>
       </div>
       <div class="card-activity" id="activity-grid">
-        <h4 id="activity-title">Monthly Activity</h4>
+        <h4 id="activity-title">Recent Activity</h4>
         <ul>
-          <% @transactions.reverse_each do |t| %>
+          <% @transactions.last(5).reverse_each do |t| %>
             <li>
               <strong>$<%= t.amount %></strong>
               donated to <strong><%= t.portfolio.ngo.name %></strong> on <%= t.transaction_date %>

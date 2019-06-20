@@ -20,6 +20,8 @@
     ".  . . t_hist";
 }
 
+
+
 #t_count {
   grid-area: t_count;
   background-color: white;
@@ -82,3 +84,30 @@
   margin: 0px;
   padding: 20px 50px;
 }
+
+@include media-breakpoint-down(sm) {
+  .result-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "t_count"
+    "t_sum"
+    "t_round"
+    "donate"
+    "t_hist";
+  }
+
+  #flex_desc {
+    display: block;
+  }
+
+  .card-activity {
+    padding: 0px;
+    margin-top: 0px;
+  }
+
+  #submit-link {
+    margin: -50px 0px 0px 15px;
+  }
+}
+
