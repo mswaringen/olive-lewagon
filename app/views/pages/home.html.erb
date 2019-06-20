@@ -109,26 +109,25 @@
       <% @ngos.each do |ngo| %>
       <div class="col-md-6">
         <%= link_to ngo_path(ngo), data: { toggle: "modal", target: "#ngo_modal_#{ngo.id}" } do  %>
-        <div class="card-trip card-home">
-          <div class="card-trip-image">
-            <%= image_tag ngo.photo %>
-          </div>
-          <div class="card-trip-infos">
-            <div>
-              <h2 class="second-text"><%= ngo.name %></h2>
-
-              <div class="d-none d-lg-block">
-                <p><%= truncate ngo.description, length: 100 %></p>
+        <div class="card-container">
+          <div class="card-trip card-home">
+            <div class="card-trip-image">
+              <%= image_tag ngo.photo %>
+            </div>
+            <div class="card-trip-infos">
+              <div>
+                <h2 class="second-text"><%= ngo.name %></h2>
+                <div class="d-none d-lg-block">
+                  <p><%= truncate ngo.description, length: 100 %></p>
+                </div>
               </div>
-
             </div>
           </div>
         </div>
+        <% end %>
       </div>
-      <% end %>
       <%= render 'ngos/modal_ngo_show', ngo: ngo, portfolio: Portfolio.new %>
       <% end %>
-
     </div>
   </div>
 </div>

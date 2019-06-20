@@ -4,16 +4,7 @@
   border-radius: 10px;
 }
 
-.modal-title {
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: 550;
-  font-size: 24px;
-  line-height: 29px;
-  color: #A1A98E;
-  margin-top: 40px;
-  width: 100%;
-}
+
 
 .modal-header {
   border: none;
@@ -77,4 +68,15 @@
 #index-page a {
   text-decoration: none;
   color: black;
+}
+
+
+@include media-breakpoint-down(sm) {
+  .card-large {
+    width: 100%;
+  }
+
+  .modal-title {
+    font-size: 2em;
+  }
 }

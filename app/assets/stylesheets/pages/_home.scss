@@ -108,10 +108,14 @@ body {
 }
 
 .card-home {
-  margin: 25px;
+
 }
 
-
+.card-container {
+  display: flex;
+  justify-content: center;
+  margin: 40px;
+}
 
 @include media-breakpoint-down(sm) {
   #type {
