@@ -17,7 +17,7 @@ class PaymentsController < ApplicationController
     charge = Stripe::Charge.create(
       customer:     customer.id,   # You should store this customer id and re-use it.
       amount:       @transaction.amount_cents,
-      description:  "Donation to <%= @transaction.portfolio.ngo.name %>",
+      description:  "Donation to #{@transaction.portfolio.ngo.name}",
       currency:     @transaction.amount.currency
     )
 
