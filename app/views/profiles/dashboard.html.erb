@@ -54,7 +54,7 @@
       </div>
       <div class="card-impact" id="social-grid">
         <h4 id="activity-title" style="margin: 20px;">Share your cause with friends</h4>
-        <%= social_share_button_tag([current_user.portfolios.last.ngo.photo, current_user.portfolios.last.ngo.name, current_user.portfolios.last.ngo.description], :allow_sites => %w(twitter facebook whatsapp_web email)) %>
+        <%= social_share_button_tag("Check out my social impact portfolio chart", :url => "https://demo.olive.gives/", :allow_sites => %w(twitter facebook whatsapp_web email) ) %>
       </div>
     </div>
   </div>

@@ -4,6 +4,7 @@ ruby '2.5.3'
 gem "chartkick"
 gem 'groupdate'
 gem 'social-share-button', '~> 1.2'
+gem "font-awesome-rails"
 
 gem 'bootsnap', require: false
 gem 'devise'

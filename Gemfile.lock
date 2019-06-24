@@ -80,6 +80,8 @@ GEM
     faraday_middleware (0.13.1)
       faraday (>= 0.7.4, < 1.0)
     ffi (1.11.1)
+    font-awesome-rails (4.7.0.5)
+      railties (>= 3.2, < 6.1)
     font-awesome-sass (5.6.1)
       sassc (>= 1.11)
     globalid (0.4.2)
@@ -234,6 +236,7 @@ DEPENDENCIES
   chartkick
   devise
   dotenv-rails
+  font-awesome-rails
   font-awesome-sass (~> 5.6.1)
   groupdate
   jbuilder (~> 2.0)
