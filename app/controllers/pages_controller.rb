@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:home, :aboutus, :sitemap]
+  skip_before_action :authenticate_user!, only: [:home, :aboutus, :faq]
 
   def home
     @ngos = Ngo.all
