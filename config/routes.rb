@@ -17,5 +17,6 @@ Rails.application.routes.draw do
   post "get_access_token", to: "round_ups#get_access_token"
   get "link_result", to: "round_ups#link_result"
   get "aboutus", to: "pages#aboutus"
+  get "faq", to: "pages#faq"
 
 end
