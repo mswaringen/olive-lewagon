@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.5.3'
 
-gem "chartkick"
+gem "chartkick", ">= 3.2.0"
 gem 'groupdate'
 gem 'social-share-button', '~> 1.2'
 
